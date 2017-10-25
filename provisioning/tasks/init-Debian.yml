@@ -18,6 +18,13 @@
     - openssh-server
   when: '"xdebug" in installed_extras'
 
+- name: Ensure privilege separation directory persist.
+  file:
+    path: "/var/run/sshd"
+    state: directory
+    mode: 0755
+  when: '"xdebug" in installed_extras'
+
 # Ubuntu-specific tasks.
 - name: Add repository for Apache 2.4.9+ (Ubuntu 12/14).
   apt_repository: repo='ppa:ondrej/apache2'
