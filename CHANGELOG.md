@@ -832,3 +832,4 @@ Read the [Drupal VM 3 announcement blog post](http://www.jeffgeerling.com/blog/2
 ...
 
 ## 1.0.0 (2014-03-24)
+
