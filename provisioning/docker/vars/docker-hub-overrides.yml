@@ -8,7 +8,7 @@ installed_extras:
   - memcached
   - pimpmylog
   # - varnish
-  # - xdebug
+   - xdebug
 
 # Don't build or install Drupal inside the container.
 drupal_build_makefile: false
