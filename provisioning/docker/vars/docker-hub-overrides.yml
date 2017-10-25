@@ -5,10 +5,9 @@ installed_extras:
   - adminer
   - drush
   - mailhog
-  - memcached
   - pimpmylog
+  - xdebug
   # - varnish
-   - xdebug
 
 # Don't build or install Drupal inside the container.
 drupal_build_makefile: false
