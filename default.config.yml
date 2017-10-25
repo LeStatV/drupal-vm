@@ -14,9 +14,9 @@ vagrant_gui: false
 
 # If you need to run multiple instances of Drupal VM, set a unique hostname,
 # machine name, and IP address for each instance.
-vagrant_hostname: drupalvm.test
-vagrant_machine_name: drupalvm
-vagrant_ip: 192.168.88.88
+vagrant_hostname: drupalvm-ipe.test
+vagrant_machine_name: drupalvm-ipe
+vagrant_ip: 192.168.88.98
 
 # Allow Drupal VM to be accessed via a public network interface on your host.
 # Vagrant boxes are insecure by default, so be careful. You've been warned!
@@ -37,7 +37,7 @@ vagrant_synced_folders:
 
 # Memory and CPU to use for this VM.
 vagrant_memory: 2048
-vagrant_cpus: 1
+vagrant_cpus: 2
 
 # Ensure vagrant plugins are installed.
 vagrant_plugins:
@@ -79,14 +79,14 @@ drupal_composer_project_options: "--prefer-dist --stability dev --no-interaction
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
 # settings below), but instead copy down a database (e.g. using drush sql-sync).
-drupal_install_site: true
+drupal_install_site: false
 
 # Required Drupal settings.
-drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_core_path: "{{ drupal_composer_install_dir }}/docroot"
 drupal_core_owner: "{{ drupalvm_user }}"
 drupal_db_user: drupal
 drupal_db_password: drupal
-drupal_db_name: drupal
+drupal_db_name: ipe
 drupal_db_host: localhost
 
 # Settings for installing a Drupal site if 'drupal_install_site:' is 'true'.
@@ -214,7 +214,7 @@ installed_extras:
   # - elasticsearch
   # - java
   - mailhog
-  # - memcached
+  - memcached
   # - newrelic
   # - nodejs
   - pimpmylog
@@ -225,7 +225,7 @@ installed_extras:
   # - tideways
   # - upload-progress
   - varnish
-  # - xdebug
+  - xdebug
   # - xhprof # use `tideways` if you're installing PHP 7+
 
 # Add any extra apt or yum packages you would like installed.
@@ -317,7 +317,7 @@ pimpmylog_install_dir: /usr/share/php/pimpmylog
 pimpmylog_grant_all_privs: true
 
 # XDebug configuration. XDebug is disabled by default for better performance.
-php_xdebug_default_enable: 0
+php_xdebug_default_enable: 1
 php_xdebug_coverage_enable: 0
 php_xdebug_cli_enable: 1
 php_xdebug_remote_enable: 1
@@ -336,8 +336,8 @@ solr_xmx: "128M"
 selenium_version: 2.53.0
 
 # Docker configuration.
-docker_container_name: drupal-vm
-docker_image_name: drupal-vm
+docker_container_name: drupal-vm-ipe
+docker_image_name: drupal-vm-ipe
 docker_image_path: ~/Downloads
 
 # Other configuration.
