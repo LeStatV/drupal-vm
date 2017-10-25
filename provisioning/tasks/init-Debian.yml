@@ -11,11 +11,8 @@
     - sudo
     - unzip
     - make
-
-- name: Install openssh-server
-  apt: "name={{ item }} state=installed"
-  with_items:
     - openssh-server
+
 
 # Ubuntu-specific tasks.
 - name: Add repository for Apache 2.4.9+ (Ubuntu 12/14).
