@@ -7,7 +7,7 @@ installed_extras:
   - mailhog
   - memcached
   - pimpmylog
-  - varnish
+  # - varnish
   # - xdebug
 
 # Don't build or install Drupal inside the container.
