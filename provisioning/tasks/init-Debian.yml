@@ -11,8 +11,6 @@
     - sudo
     - unzip
     - make
-    - openssh-server
-
 
 # Ubuntu-specific tasks.
 - name: Add repository for Apache 2.4.9+ (Ubuntu 12/14).
