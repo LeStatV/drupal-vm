@@ -326,7 +326,7 @@ php_xdebug_remote_port: 9000
 php_xdebug_remote_autostart: true
 php_xdebug_idekey: 'phpstorm.xdebug'
 php_xdebug_max_nesting_level: 256
-php_xdebug_remote_host: "{{ ansible_default_ipv4.gateway }}"
+php_xdebug_remote_host: "{{ lookup('env','XDEBUG_CONFIG_HOST') }}"
 
 # Solr Configuration (if enabled above).
 solr_version: "5.5.3"
