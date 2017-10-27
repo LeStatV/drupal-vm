@@ -11,6 +11,6 @@ RUN ansible-playbook /etc/ansible/drupal-vm/provisioning/playbook.yml \
   # Enable FPM. See https://github.com/geerlingguy/drupal-vm/issues/1366.
   && systemctl enable php7.1-fpm.service
 
-EXPOSE 80 443 3306 8025
+EXPOSE 80 81 443 3306 8025
 
 CMD ["/lib/systemd/systemd"]
